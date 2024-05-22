@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* Add your styles specific to the services page here */
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(95deg, #3384e7, #941fe7b6);
+            color: #000000;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 50px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            width: 350px; /* Set a fixed width for each service item */
+            text-align: center;
+            position: relative; /* Add position relative for pseudo-element */
+            overflow: hidden; /* Hide overflow to prevent shine effect from extending beyond the card */
+        }
+
+        .service-item:hover::before {
+            transform: translateX(100%); /* Translate to 100% on hover to show the left-to-right shine effect */
+        }
+
+        .service-image {
+            width: 100%; /* Image takes the full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3f3b3b;
+        }
+
+        .service-description {
+            color: #333;
+        }
+
+        /* Pseudo-element for shine effect */
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%; /* Initially positioned to the left of the card */
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgb(118 152 213 / 26%),transparent); /* Adjust the gradient as needed */
+            transition: transform 0.3s; /* Add transition for smooth effect */
+        }
+
+        /* New CSS for the creative navigation text */
+        .creative-text {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            margin-right: 200px;
+            /* padding: 5px 10px; */
+            border-radius: 5px;
+            background-color: #33333300;
+            margin-left: -481px;
+            font-weight: bold;
+        }
+
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 145px; /* Push the footer to the bottom */
+        }
+ /* Mobile navigation menu styles */
+ .mobile-menu-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            z-index: 9999;
+            color: #fff;
+        }
+
+        .mobile-nav-container {
+            height: 100%;
+            width: 0; /* Initially set to 0 */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .mobile-nav-container a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .mobile-nav-container a:hover, .mobile-nav-container a:focus {
+            color: #f1f1f1;
+        }
+        .mobile-nav-container .closebtn {
+            position: absolute;
+            top: 5px;
+            left: 0px; /* Change from right to left */
+            font-size: 50px;
+            color: white;
+        }
+
+        @media screen and (max-height: 450px) {
+            .mobile-nav-container a {
+                font-size: 20px;
+            }
+            .mobile-nav-container .closebtn {
+                font-size: 40px;
+                top: 15px;
+                left: 35px; /* Change from right to left */
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .nav-container {
+                display: none;
+            }
+            .mobile-menu-icon {
+                display: block;
+            }
+        }
+        @media only screen and (min-width: 769px) {
+            .mobile-menu-icon {
+                display: none;
+            }
+            .mobile-nav-container{
+                display: none;
+            }
+            .footer-container {
+                display: block;
+            }
+            .nav-container {
+                display: flex;
+            }
+        }
+
+    </style>
+    <title>Services</title>
+</head>
+<body>
+    <header class="hero-header">
+        <div class="hero-overlay">
+            <!-- Mobile menu icon -->
+            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+                &#9776;
+            </div>
+            <nav class="nav-container">
+                <span class="creative-text">Aryan Acharya</span>                
+                <a href="index.html">Home</a>
+                <a href="Resume.html">Resume</a>
+                <a href="services.html">Services</a> <!-- Add the new page link -->
+                <a href="contact.html">Contact</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile navigation menu -->
+    <div id="myNav" class="mobile-nav-container">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMobileNav()">&times;</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <div class="services-container">
+        <!-- Add your services content here -->
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Software Development.jpg" alt="Web Development">
+            <h2 class="service-title">Web Development</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\web designing.png" alt="Graphic Design">
+            <h2 class="service-title">Web Designing </h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\UI-UX Design.png" alt="Graphic Design">
+            <h2 class="service-title">UI/UX Design</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\AI and Machine Learning Services.png" alt="Graphic Design">
+            <h2 class="service-title">AI and Machine Learning Services</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Chatbot Development.png" alt="Graphic Design">
+            <h2 class="service-title">Chatbot Development</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Cloud Computing.png" alt="Graphic Design">
+            <h2 class="service-title">Cloud Computing</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Database Management.png" alt="Graphic Design">
+            <h2 class="service-title">Database Management</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Data Analysis.png" alt="Graphic Design">
+            <h2 class="service-title">Software Testing</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\software testing.png" alt="Graphic Design">
+            <h2 class="service-title">Data Analysis.png</h2>
+        </div>
+
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\E-commerce Solutions.png" alt="Graphic Design">
+            <h2 class="service-title">E-commerce Solutions</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Video Editing.png" alt="Graphic Design">
+            <h2 class="service-title">Video Editing</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Branding and Logo Design.png" alt="Graphic Design">
+            <h2 class="service-title">Branding and Logo Design</h2>
+        </div>
+
+        <div class="service-item">
+            <img class="service-image" src="templetes\services\Social Media Graphics.png" alt="Graphic Design">
+            <h2 class="service-title">Social Media Graphics</h2>
+        </div>
+        
+        <!-- Add more service items as needed -->
+    </div>
+
+    <footer class="footer-container">
+        &copy; 2024 Aryan Acharya | Portfolio Website
+    </footer>
+    <script>
+
+// Function to toggle the mobile menu
+function toggleMobileNav() {
+    var nav = document.getElementById("myNav");
+    if (nav.style.width === "0px" || nav.style.width === "") {
+        nav.style.width = "50%";
+    } else {
+        nav.style.width = "0"; // Set width to 0 when closing
+    }
+}
+
+// Function to close the mobile navigation menu
+function closeMobileNav() {
+    var nav = document.getElementById("myNav");
+    nav.style.width = "0";
+}
+
+// Redirect to the clicked link after closing the mobile menu
+document.querySelectorAll('#myNav nav a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        closeMobileNav(); // Close the mobile menu
+        setTimeout(() => {
+            window.location.href = event.target.href; // Redirect to the clicked link after a short delay
+        }, 300);
+    });
+});
+// Function to resize all images to a fixed width and height
+function resizeImages() {
+    var serviceImages = document.querySelectorAll('.service-image');
+
+    // Set the desired width and height for the images
+    var targetWidth = 350;
+    var targetHeight = 250;
+
+    // Iterate through each image and set the fixed width and height
+    serviceImages.forEach(function (image) {
+        image.style.width = targetWidth + 'px';
+        image.style.height = targetHeight + 'px';
+    });
+
+    // Set the width of each service item container to match the target width
+    var serviceItems = document.querySelectorAll('.service-item');
+    serviceItems.forEach(function (item) {
+        item.style.width = targetWidth + 'px';
+    });
+}
+
+// Call the resizeImages function after the page is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    resizeImages();
+});
+    </script>
+
+</body>
+</html>

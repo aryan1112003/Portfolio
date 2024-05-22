@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Aryan Acharya - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(95deg, #3384e7, #941fe7b6);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffcc29;
+}
+
+.hero-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+h3 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* New styles for circular image container */
+
+
+.image-section {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.circular-image-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #fff; /* Optional border for better visibility */
+    margin-top: -37px; /* Adjust margin as needed */
+}
+
+.circular-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+.h1 {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+.nav-container-2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-right: -160px;
+    height: 180px;
+}
+
+.nav-container-2  a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-container-2  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc29;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container-2  a:hover {
+    color: #ffcc29;
+}
+
+.nav-container-2  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Optional: Add a subtle shadow on hover */
+.nav-container-2  a:hover {
+    text-shadow: 0 0 5px rgba(255, 204, 41, 0.5);
+}
+
+.nav-container-2  a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc29;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container-2  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.hero-content2 {
+    text-align: center;
+    margin-top: 11px;
+    margin-left: -125px;
+}
+
+/* New CSS for the creative navigation text */
+
+ .creative-text {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .creative-text-mobile {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: none;
+            margin-bottom: 0%;
+
+        }
+            .mobile-menu-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            z-index: 9999;
+            font-weight: bolder;
+        }
+        .nav-container {
+            display: flex;
+            flex-direction: row; /* Updated to row for desktop view */
+            align-items: center;
+            margin-right: 50px;
+        }
+        .nav-container a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+            transition: color 0.3s ease;
+        }
+        .nav-container a:hover {
+            color: #e6ba0c;
+        }
+
+        .quote-section {background-color: #0b0b0b;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-top: 2px solid #ffcc29;
+        padding-bottom: -150px;
+    }
+
+        
+
+        /* New container for mobile menu */
+        .mobile-nav-container {
+            height: 100%;
+            width: 0; /* Initially set to 0 */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .mobile-nav-container a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .mobile-nav-container a:hover, .mobile-nav-container a:focus {
+            color: #f1f1f1;
+        }
+        .mobile-nav-container .closebtn {
+            position: absolute;
+            top: 5px;
+            left: 0px; /* Change from right to left */
+            font-size: 50px;
+            color: white;
+        }
+        @media screen and (max-height: 450px) {
+            .mobile-nav-container a {
+                font-size: 20px;
+            }
+            .mobile-nav-container .closebtn {
+                font-size: 40px;
+                top: 15px;
+                left: 35px; /* Change from right to left */
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .nav-container {
+                display: none;
+            }
+            .mobile-menu-icon {
+                display: block;
+            }
+            .hero-content2 {
+                margin-left: 0; /* Adjust the margin for smaller screens */
+                height:20px;
+            }
+            .hero-section {
+                margin: 20px 0; /* Adjust margin for smaller screens */
+                
+            }
+            .nav-container-2 {
+                flex-direction: column; /* Adjust flex direction for smaller screens */
+                align-items: center; /* Center items for smaller screens */
+                margin-right: 0; /* Reset margin for smaller screens */
+                height: 550px; /* Set height to 350px in mobile view */
+                margin-top: -150px;
+
+            }
+            #roleText {
+                visibility: stable; /* Hide the text initially */
+            }
+            
+        }
+        
+        .circular-image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        @media only screen and (min-width: 769px) {
+            .mobile-menu-icon {
+                display: none; /* Hide the menu icon on larger screens */
+            }
+            .mobile-nav-container {
+                display: none;
+            }
+            .footer-container {
+                display: block;
+                margin-bottom: -65px;
+            }
+            .nav-container {
+                display: flex;
+            }
+            .circular-image-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: -350px; 
+            }
+    }
+</style>
+<body>
+    <header class="hero-header">
+        <div class="hero-overlay">
+            <span class="creative-text">Aryan Acharya</span>
+            <!-- Mobile menu icon -->
+            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+                &#9776;
+            </div>
+            <!-- Navigation for desktop view -->
+            <nav class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="Resume.html">Resume</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile menu -->
+    <div id="myNav" class="mobile-nav-container">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+        
+        <!-- Navigation for mobile view -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <header class="hero-header">
+        <div class="hero-overlay">
+            
+            <nav class="nav-container-2">
+                
+            <div class="image-section">
+                <div class="circular-image-container">
+                    <img src="Untitled design (17).png" alt="Aryan Acharya Image">
+                </div>
+            </div>
+            <div class="hero-content2">
+                <h1>Aryan Acharya</h1>
+                <p class="tagline">Crafting Tomorrow's Intelligence Today</p>
+                <p id="roleText"></p>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content-container">
+            <h2>Welcome to My World of Innovation</h2>
+            <h3>Embark on a journey where data transforms into knowledge, and algorithms paint the canvas of innovation. As a Machine Learning Engineer, I thrive on pushing the boundaries of what's possible.</h3>
+            <h3>Join me in exploring the intersection of technology and creativity.</h3>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <blockquote>
+            <p>"In the vast landscape of technology, every line of code is a brushstroke, and each algorithm is a masterpiece in the making."</p>
+            <footer>- Aryan Acharya</footer>
+        </blockquote>
+    </section>
+
+    <footer class="footer-container">
+        &copy; 2024 Aryan Acharya | Crafting Tomorrow's Intelligence Today
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const roleTextElement = document.getElementById('roleText');
+    const roles = ['Web Developer', 'Graphic Designer', 'AI Engineer','Cloud Engineer'];
+    let roleIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < roles[roleIndex].length) {
+            roleTextElement.textContent += roles[roleIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100); // Adjust typing speed (milliseconds)
+        } else {
+            setTimeout(erase, 1500); // Wait before erasing
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            roleTextElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50); // Adjust erasing speed (milliseconds)
+        } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(type, 500); // Wait before typing the next role
+        }
+    }
+
+    type(); // Start the typing animation
+});
+
+// Function to toggle the mobile menu
+function toggleMobileNav() {
+    var nav = document.getElementById("myNav");
+    if (nav.style.width === "0px" || nav.style.width === "") {
+        nav.style.width = "50%";
+    } else {
+        nav.style.width = "0"; // Set width to 0 when closing
+    }
+}
+
+// Function to close the mobile navigation menu
+function closeMobileNav() {
+    var nav = document.getElementById("myNav");
+    nav.style.width = "0";
+}
+
+// Redirect to the clicked link after closing the mobile menu
+document.querySelectorAll('#myNav nav a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        closeMobileNav(); // Close the mobile menu
+        setTimeout(() => {
+            window.location.href = event.target.href; // Redirect to the clicked link after a short delay
+        }, 300);
+    });
+});
+
+// Function to stabilize the text in roleTextElement
+function stabilizeRoleText() {
+    roleTextElement.textContent = roles[roleIndex]; // Set the text to its final value
+    roleTextElement.style.visibility = 'visible'; // Make the text visible
+}
+
+// Call stabilizeRoleText function after typing animation completes
+setTimeout(stabilizeRoleText, roles[roleIndex].length * 100 + 1500); // Adjust timing as needed
+
+
+
+    </script>
+
+</body>
+</html>

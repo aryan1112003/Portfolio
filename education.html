@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css"> <!-- Added this line -->
+    <title>Aryan Acharya - Education</title>
+    <style>
+        
+        /* Education Section Styles */
+        .education-section {
+            text-align: center;
+            padding: 0px 0;
+        }
+
+        .education-section h2 {
+            color: #ffffff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .education-item {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 300px;
+        }
+
+        .education-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3 {
+            color: #3498db;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .education-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        h2 {
+        color: #ffffff;
+        margin-bottom: 20px;
+        }
+
+        .footer-container {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 145px; /* Push the footer to the bottom */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="hero-header">
+        <div class="hero-overlay">
+            <nav class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="skills.html">Skills</a>
+                <a href="education.html">Education</a>
+                <a href="blog.html">Blog</a>
+                <a href="services.html">Services</a> <!-- Add the new page link -->
+            </nav>
+        </div>
+    </header>
+
+    <section class="education-section">
+        <h2>Academic Background</h2>
+
+        <div class="education-container">
+            <div class="education-item">
+                <h3>SILVER OAK UNIVERSITY</h3>
+                <p>B.Tech in Computer Engineering with ML & AI (Machine Learning and Artificial Intelligence)</p>
+                <p>6th SEM SPI-8.76</p>
+            </div>
+
+            <div class="education-item">
+                <h3>OPEN SCHOOL</h3>
+                <p>NIOS 2018-01 to 2020-01 - 60%</p>
+            </div>
+
+            <div class="education-item">
+                <h3>TRIPADA INTERNATIONAL SCHOOL</h3>
+                <p>SSC 2006-01 to 2018-01 - 60%</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        &copy; 2024 Aryan Acharya | Crafting Tomorrow's Intelligence Today
+    </footer>
+</body>
+</html>

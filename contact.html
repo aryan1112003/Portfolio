@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css"> <!-- Added this line -->
+    <title>Contact Me | Aryan Acharya</title>
+    <style>
+        /* Your existing styles */
+        /* Consolidated .fa class definition */
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(95deg, #3384e7, #941fe7b6);
+            width: 100%;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .fa {
+            font-size: 40px;
+            color: #ffffff;
+            border-radius: 50%;
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Adjusted .fa:hover and .icon:hover */
+        .fa:hover,
+        .icon:hover {
+            opacity: 0.7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Set color for each brand */
+        .fa-facebook {
+            background: #3B5998;
+        }
+
+        .fa-github {
+            background: #323232;
+        }
+
+        .fa-linkedin {
+            background: #0077B5;
+        }
+
+        .fa-instagram {
+            background: #E4405F;
+        }
+
+        .fa-phone {
+            background: #25D366;
+        }
+
+        .fa-envelope {
+            background: #484848;
+        }
+
+        /* Your remaining styles */
+        /* Additional Styles for Skills Section */
+        
+
+        .hero-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 50px;
+        }
+
+        h2 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .quote-section {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ffcc29;
+        }
+
+        blockquote {
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        blockquote footer {
+            color: #ffcc29;
+            margin-top: 10px;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+        }
+
+        /* Contact icons */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Icon */
+        .icon {
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #8d898900;
+            border-radius: 50%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .icon img {
+            width: 29px;
+            height: 29px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .fa {
+            font-size: 40px;
+            color: #ffffff;
+            border-radius: 50%;
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fa:hover,
+        .icon:hover {
+            opacity: 0.7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Set color for each brand */
+        .fa-facebook {
+            background: #3B5998;
+        }
+
+        .fa-github {
+            background: #323232;
+        }
+
+        .fa-linkedin {
+            background: #0077B5;
+        }
+
+        .fa-instagram {
+            background: #E4405F;
+        }
+
+        .fa-phone {
+            background: #25D366;
+        }
+
+        .fa-envelope {
+            background: #484848;
+        }
+
+        .contect-me {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Add this CSS code for contact form styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contactForm {
+            max-width: 600px;
+            width: 100%;
+            background-color: #6f7a851e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+        }
+
+        .inputBox {
+            margin-bottom: 20px;
+        }
+
+        .inputBox input,
+        .inputBox textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 5px;
+            border: #22222200;
+        }
+
+        .inputBox textarea {
+            resize: vertical;
+        }
+
+        .button {
+            background-color: #ffcc29;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: #ffcc29;
+        }
+
+        /* Move icons to the bottom of the form in a horizontal line */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .icon {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Adjust icon size for better alignment */
+        .icon img,
+        .fa {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .fa {
+            font-size: 30px;
+            padding: 15px;
+            margin: 0 13px;
+        }
+
+        /* New CSS for the creative navigation text */
+        .creative-text {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #33333300;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-right: -160px;
+            height: 180px;
+        }
+
+        .nav-container a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-container a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffcc29;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-container a:hover {
+            color: #ffcc29;
+        }
+
+        .nav-container a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Optional: Add a subtle shadow on hover */
+        .nav-container a:hover {
+            text-shadow: 0 0 5px rgba(255, 204, 41, 0.5);
+        }
+
+        .nav-container a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffcc29;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-container a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }
+
+
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 145px;
+        }
+
+        /* Mobile Menu Icon */
+        .mobile-menu-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            z-index: 9999;
+            font-weight: bolder;
+        }
+
+        /* Mobile Menu Container */
+        .mobile-nav-container {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .mobile-nav-container a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-nav-container a:hover,
+        .mobile-nav-container a:focus {
+            color: #f1f1f1;
+        }
+
+        .mobile-nav-container .closebtn {
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            font-size: 50px;
+            color: white;
+        }
+
+        @media screen and (max-height: 450px) {
+            .mobile-nav-container a {
+                font-size: 20px;
+            }
+
+            .mobile-nav-container .closebtn {
+                font-size: 40px;
+                top: 15px;
+                left: 35px;
+            }
+        }
+
+        .mobile-menu-icon {
+                display: none; /* Show the mobile menu icon on smaller screens */
+            }
+            .contactForm {
+                width: auto;/* Adjust padding as needed */
+            }
+
+
+        @media only screen and (max-width: 768px) {
+                    .nav-container {
+                display: none; /* Hide the navigation menu on smaller screens */
+            }
+            
+
+            .mobile-menu-icon {
+                display: flex; /* Show the mobile menu icon on smaller screens */
+            }
+            .contactForm {
+                width: auto;/* Adjust padding as needed */
+                display: flex;
+                align-items: center;
+            }
+            .base-contect{
+                display: flex;
+                align-content: center;
+                width: auto;
+            }
+        }
+        @media only screen and (min-width: 769px) {
+            .mobile-menu-icon {
+                display: none;
+            }
+
+            .mobile-nav-container {
+                display: none;
+            }
+
+            /* Adjust other styles for larger screens */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="hero-header">
+        <div class="hero-overlay">
+            <span class="creative-text">Aryan Acharya</span>
+            <!-- Mobile menu icon -->
+            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+                &#9776;
+            </div>
+            <!-- Navigation for desktop view -->
+            <nav class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="Resume.html">Resume</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile menu -->
+    <div id="myNav" class="mobile-nav-container">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+        
+        <!-- Navigation for mobile view -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+<div class="base-contect">
+    <section> 
+        <section>
+            <div class="contect-me">
+                <h2>Contact Me</h2>
+            </div>
+        </section>
+        
+        <div class="contactForm">
+            <form action="" id="contactForm">
+                <div class="alert">Contact to me</div>
+
+                <div class="inputBox">
+                    <input type="text" id="name" placeholder="Your name...." />
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" id="emailid" placeholder="Your Email....." />
+                </div>
+
+                <div class="inputBox">
+                    <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+
+                <div class="inputBox">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+    <section class="section2">
+        <div class="contact-icons">
+            <a href="tel:9512082749" class="fa fa-phone"></a>
+            <a href="mailto:aryanacharya12003@gmail.com" class="fa fa-envelope"></a>
+            <a href="https://github.com/aryan1112003" class="fa fa-github"></a>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        &copy; 2024 Aryan Acharya | Portfolio Website
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./form.js"></script>
+    <script>
+       // Function to toggle the mobile menu
+function toggleMobileNav() {
+    var nav = document.getElementById("myNav");
+    if (nav.style.width === "0px" || nav.style.width === "" || window.innerWidth > 768) {
+        nav.style.width = "50%";
+    } else {
+        nav.style.width = "0";
+    }
+}
+    
+        // Prevent default behavior of links inside mobile menu from refreshing the page
+        document.querySelectorAll('#myNav a').forEach(item => {
+            item.addEventListener('click', event => {
+                event.preventDefault();
+                setTimeout(toggleMobileNav, 300); // Toggle the mobile menu after a short delay (300 milliseconds)
+                // Get the URL from the clicked link and navigate to it after the delay
+                setTimeout(() => {
+                    window.location.href = event.target.href;
+                }, 300);
+            })
+        });
+    </script>
+</body>
+</html>

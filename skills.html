@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Aryan Acharya - Skills</title>
+    <style>
+        /* Additional Styles for Skills Section */
+        .hero-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 50px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .skills-section {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 20px; /* Add some bottom margin between skill sections */
+        }
+
+        .skills-card {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Align image and text vertically */
+            align-items: center;
+            transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+        }
+
+        .skills-card:hover {
+            transform: translateY(-5px); /* Move card up on hover */
+        }
+
+        .skills-card img {
+            width: 60px; /* Adjust image size */
+            height: 60px; /* Adjust image size */
+            margin-bottom: 10px; /* Add some bottom margin to image */
+        }
+
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 145px;
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .skills-section {
+                flex-basis: 45%; /* Set flex basis to adjust the width of skill sections */
+            }
+
+            .nav-container {
+                display: none; /* Hide the header navigation */
+            }
+
+            .mobile-menu-icon {
+                display: block; /* Show the mobile menu icon */
+            }
+
+            .mobile-nav-container {
+                display: none; /* Hide the mobile menu initially */
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .skills-card {
+                width: 45%; /* Adjust card width for smaller screens */
+            }
+        }
+
+        /* Styles for mobile menu */
+        .mobile-nav-container {
+            height: 100%;
+            width: 0; /* Initially set to 0 */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0; /* Change from left to right */
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            /* Set width to 50% */
+            width: 50%;
+        }
+        .mobile-nav-container a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .mobile-nav-container a:hover, .mobile-nav-container a:focus {
+            color: #f1f1f1;
+        }
+        .mobile-nav-container .closebtn {
+            position: absolute;
+            top: 5px;
+            left: 0px; /* Change from right to left */
+            font-size: 50px;
+            color: white;
+        }
+        @media screen and (max-height: 450px) {
+            .mobile-nav-container a {
+                font-size: 20px;
+            }
+            .mobile-nav-container .closebtn {
+                font-size: 40px;
+                top: 15px;
+                left: 35px; /* Change from right to left */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-header">
+    <div class="hero-overlay">
+        <nav class="nav-container">
+            <span class="creative-text">Aryan Acharya</span>                
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a> <!-- Add the new page link -->
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <section class="hero-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skills-section">
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Python.png" alt="Python Logo">
+                    <p>Python</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Sql.png" alt="Python Logo">
+                    <p>SQL</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\data_analysis.png" alt="Python Logo">
+                    <p>Data Analysis</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\html-css.png" alt="Python Logo">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\js.png" alt="Python Logo">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\React-js.png" alt="Python Logo">
+                    <p>React.js</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Node-js.png" alt="Python Logo">
+                    <p>Node.js</p>
+                </div>
+            </div>
+            <div class="skills-section">
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\MongoDB.png" alt="Python Logo">
+                    <p>MongoDB</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Firebase.png" alt="Python Logo">
+                    <p>Firebase</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\GraphQL.png" alt="Python Logo">
+                    <p>GraphQL</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Git.png" alt="Python Logo">
+                    <p>Git</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Docker.png" alt="Python Logo">
+                    <p>Docker</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\AWS.png" alt="Python Logo">
+                    <p>AWS</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\REST API Design.png" alt="Python Logo">
+                    <p>REST API Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <h2>AI and Machine Learning Skills</h2>
+        <div class="skills-container">
+            <div class="skills-section">
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Machine Learning.png" alt="Python Logo">
+                    <p>Machine Learning</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Deep Learning.png" alt="Python Logo">
+                    <p>Deep Learning</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\NLP.png" alt="Python Logo">
+                    <p>Natural Language Processing (NLP)</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Computer Vision.png" alt="Python Logo">
+                    <p>Computer Vision</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\TensorFlow.png" alt="Python Logo">
+                    <p>TensorFlow</p>
+                </div>
+            </div>
+            <div class="skills-section">
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\PyTorch.png" alt="Python Logo">
+                    <p>PyTorch</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Scikit-Learn.png" alt="Python Logo">
+                    <p>Scikit-Learn</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Keras.png" alt="Python Logo">
+                    <p>Keras</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Data Preprocessing.png" alt="Python Logo">
+                    <p>Data Preprocessing</p>
+                </div>
+                <div class="skills-card">
+                    <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Feature Engineering.png" alt="Python Logo">
+                    <p>Feature Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <h2>Creative Skills</h2>
+        <div class="skills-container">
+            <div class="skills-section">
+                <div class="skills-container">
+                    <div class="skills-section">
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Adobe Illustrator.png" alt="Python Logo">
+                            <p>Adobe Illustrator</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Canva.png" alt="Python Logo">
+                            <p>Canva</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Figma.png" alt="Python Logo">
+                            <p>Figma</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\UI-UX Design.png" alt="Python Logo">
+                            <p>UI/UX Design</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\AdobeXD.png" alt="Python Logo">
+                            <p>Adobe XD</p>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Adobe Premiere Pro.png" alt="Python Logo">
+                            <p>Adobe Premiere Pro</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\iMovie.png" alt="Python Logo">
+                            <p>iMovie</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Final Cut Pro.png" alt="Python Logo">
+                            <p>Final Cut Pro</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\filmora.png" alt="Python Logo">
+                            <p>Filmora</p>
+                        </div>
+                        <div class="skills-card">
+                            <img src="C:\Users\aryan\Downloads\New folder (17)\templetes\logos\Lightroom.png" alt="Python Logo">
+                            <p>Lightroom</p>
+                        </div>
+                    </section>
+
+    <footer class="footer-container">
+        &copy; 2024 Aryan Acharya | Crafting Tomorrow's Intelligence Today
+    </footer>
+
+    <div id="myNav" class="mobile-nav-container">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("myNav");
+            if (mobileNav.style.width === "0px" || mobileNav.style.width === "") {
+                mobileNav.style.width = "50%";
+            } else {
+                mobileNav.style.width = "0px";
+            }
+        }
+    
+        function closeMobileNav() {
+            document.getElementById("myNav").style.width = "0";
+        }
+    </script>
+    
+
+    <script>
+        // Wait for the DOM to be ready
+        $(document).ready(function () {
+            // Log technical skills
+            $('.skills-section:nth-child(1) .skills-card p').each(function () {
+                console.log('Technical Skill:', $(this).text());
+            });
+
+            // Log AI and Machine Learning skills
+            $('.skills-section:nth-child(2) .skills-card p').each(function () {
+                console.log('AI/ML Skill:', $(this).text());
+            });
+
+            // Log Creative skills
+            $('.skills-section:nth-child(3) .skills-card p').each(function () {
+                console.log('Creative Skill:', $(this).text());
+            });
+        });
+    </script>
+
+</body>
+</html>

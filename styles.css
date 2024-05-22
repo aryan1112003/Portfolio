@@ -1,0 +1,175 @@
+
+
+.hero-header {
+    position: relative;
+    /* height: 45vh; */
+    display: flex;
+    align-items: top;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('video1.mp4'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(1.5); /* Parallax effect */
+    z-index: -1;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* Navigation Styles */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-right: -160px;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-container a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc29;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container a:hover {
+    color: #ffcc29;
+}
+
+.nav-container a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Optional: Add a subtle shadow on hover */
+.nav-container a:hover {
+    text-shadow: 0 0 5px rgba(255, 204, 41, 0.5);
+}
+
+.nav-container a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc29;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.tagline {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffcc29;
+}
+
+.hero-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.quote-section {
+    background-color: #0b0b0b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ffcc29;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote footer {
+    color: #ffcc29;
+    margin-top: 10px;
+}
+
+.footer-container {
+    background-color: #222222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 145px; /* Push the footer to the bottom */
+}
+
+/* Loader styles */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+
+/* Loading line animation */
+#loading-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc29; /* Yellow */
+    z-index: 9998; /* Ensure it's above the loader */
+    transition: width 0.5s ease-in-out; /* Animation duration and easing */
+}

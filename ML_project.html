@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #33333300;
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.project {
+    width: calc(33.33% - 40px);
+    background-color: #fff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h2 {
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-content p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.technologies {
+    margin-bottom: 20px;
+}
+
+.technologies p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.technologies ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.technologies ul li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.actions a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.actions a:hover {
+    background-color: #555;
+}
+
+
+.hero-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 50px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .blog-post {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+            cursor: pointer; /* Add this line to make the container clickable */
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        color: #333; /* Set default text color */
+    }
+        
+
+        .blog-post .click-view-text {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .blog-post:hover {
+        transform: scale(1.05);
+        background-color: #f0f0f0; /* Set background color on hover */
+        color: #ff4500; /* Set text color on hover */
+    }
+
+    .blog-post .click-view-text {
+        /* ... Your existing styles ... */
+        color: #ffffff; /* Set default text color */
+    }
+
+    .blog-post:hover .click-view-text {
+        opacity: 1;
+        color: #ff4500; /* Set text color on hover */
+    }
+
+    .blog-title {
+        /* ... Your existing styles ... */
+        color: #3f3b3b; /* Set default text color */
+    }
+
+    .blog-meta {
+        /* ... Your existing styles ... */
+        color: #888; /* Set default text color */
+    }
+
+    .blog-content {
+        /* ... Your existing styles ... */
+        color: #333; /* Set default text color */
+    }
+
+    /* New CSS for the creative navigation text */
+    .creative-text {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            margin-right: 200px;
+            /* padding: 5px 10px; */
+            border-radius: 5px;
+            background-color: #33333300;
+            margin-left: -481px;
+            font-weight: bold;
+        }
+
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 145px; /* Push the footer to the bottom */
+        }
+
+</style>
+<body>
+
+    <header class="hero-header">
+        <div class="hero-overlay">
+            <nav class="nav-container">
+                <span class="creative-text">Aryan Acharya</span>                
+                <a href="index.html">Home</a>
+                <a href="Resume.html">Resume</a>
+                <a href="blog.html">Blog</a>
+                <a href="services.html">Services</a> <!-- Add the new page link -->
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <header>
+        <h1>My Projects</h1>
+    </header>
+
+    <section class="projects">
+        <div class="project">
+            <h2>Project 1</h2>
+            <div class="project-details">
+                <div class="media">
+                    <img src="project1.jpg" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <p>Description of Project 1</p>
+                    <div class="technologies">
+                        <p>Technologies Used:</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <a href="project1_code_link" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <h2>Project 2</h2>
+            <div class="project-details">
+                <div class="media">
+                    <img src="project2.jpg" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <p>Description of Project 2</p>
+                    <div class="technologies">
+                        <p>Technologies Used:</p>
+                        <ul>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <a href="project2_live_demo_link" target="_blank">Live Demo</a>
+                        <a href="project2_code_link" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more project sections here -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

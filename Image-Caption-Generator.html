@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(95deg, #3384e7, #941fe7b6);
+    color: #000000;
+    overflow-x: hidden;
+}
+    .documentation-container {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            position: relative; /* Add relative positioning */
+        }
+
+        .documentation-section {
+            margin-bottom: 40px;
+        }
+
+        .documentation-section h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .documentation-section p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .documentation-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+
+        .documentation-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back button styles */
+        .back-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #f8f8f8;
+            position: absolute; /* Add absolute positioning */
+            top: 20px; /* Position from the top */
+            left: 20px; /* Position from the left */
+        }
+
+        .back-button:hover {
+            color: #ffffff;
+        }
+
+
+        .white-container {
+    background-color: #ffffff; /* White background color */
+    padding: 30px; /* Add some padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    max-width: 800px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 50px; /* Adjust the top margin as needed */
+    margin-bottom: 50px;
+    }
+
+
+    /* Responsive styles */
+    @media only screen and (max-width: 768px) {
+        .documentation-container {
+            padding: 10px;
+        }
+
+        .documentation-section h2 {
+            font-size: 1.5em;
+        }
+
+        .documentation-section p,
+        .documentation-section ul {
+            font-size: 1em;
+        }
+
+        .back-button {
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+        }
+        .white-container {
+        padding: 20px;
+        max-width: 90%; /* Adjust the maximum width for smaller screens */
+        margin-top: 40px; /* Adjust the top margin */
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .documentation-section h2 {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+    
+    .documentation-section p {
+        font-size: 1em; /* Adjust the font size for smaller screens */
+        line-height: 1.5; /* Adjust the line height for smaller screens */
+    }
+
+
+    }
+</style>
+    <title>Safty_detection_restricade_area</title>
+</head>
+<body>
+    <div class="white-container">
+        <h1>Image Caption Generator</h1>
+    <div class="documentation-container">
+        <!-- Add your documentation content here -->
+        <div class="documentation-section">
+            <h2>Introduction:</h2>
+            <p>Image-Caption-Generator is a project designed to generate descriptive captions for images using deep learning techniques. This documentation provides an overview of the project's features, installation instructions, usage guidelines, and more.
+            </p>
+        </div>
+        
+        <div class="documentation-section">
+            <h2>Project Description:</h2>
+            <p>The Image-Caption-Generator project combines convolutional neural networks (CNNs) and recurrent neural networks (RNNs) to analyze images and generate descriptive text captions. It aims to bridge the gap between visual data and natural language, providing a means to understand and describe the content of images automatically.
+            </p>
+        </div>
+
+        <div class="documentation-section">
+            <h2>Features:</h2>
+            <ul>
+                <li>Automatic generation of image captions</li>
+                <li>Support for various image formats</li>
+                <li>Pre-trained model for quick setup</li>
+                <li>Customizable for different datasets and applications</li>
+            </ul>
+        </div>
+
+        <div class="documentation-section">
+            <h2>Technologies Used:</h2>
+            <ul>
+                <li>Python</li>
+                <li>TensorFlow/Keras</li>
+                <li>NumPy</li>
+                <li>Flask</li>
+                <li>HTML/CSS for the front-end</li>
+            </ul>
+        </div>
+        <!-- More sections for Technologies Used, Installation and Setup, Usage, etc. -->
+
+        <div class="documentation-section">
+            <h2>Links:</h2>
+            <ul>
+                <li><a href="https://github.com/aryan1112003/Image-Caption-Generator">GitHub Repository</a></li>
+                <li><a href="https://youtu.be/cuxAzv5WXrM">Youtube: Video Of Restricted Area</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Back button to go back to Resume.html -->
+    <button class="back-button" onclick="goBack()"><i class="fa fa-arrow-left"></i> Back</button>
+
+
+
+    <script>
+        function goBack() {
+            window.location.href = 'resume.html';
+        }
+    </script>
+</body>
+</html>

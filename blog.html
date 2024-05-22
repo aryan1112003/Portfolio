@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(95deg, #3384e7, #941fe7b6);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Your existing styles */
+        /* Additional Styles for Skills Section */
+        .hero-section {
+            background-color: #f8f8f8;
+            padding: 5% 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.484);
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 4%;
+            font-size: 2em;
+        }
+        .blog-post {
+            position: relative;
+            background-color: #fff;
+            padding: 3%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 4%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            color: #333;
+        }
+        .blog-post .click-view-text {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 1em;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .blog-post:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+            color: #ff4500;
+        }
+        .blog-post .click-view-text {
+            color: #ffffff;
+        }
+        .blog-post:hover .click-view-text {
+            opacity: 1;
+            color: #ff4500;
+        }
+        .blog-title {
+            color: #3f3b3b;
+        }
+        .blog-meta {
+            color: #888;
+        }
+        .blog-content {
+            color: #333;
+        }
+        /* New CSS for the creative navigation text */
+        .creative-text {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .creative-text-mobile {
+            font-family: cursive;
+            font-size: 1.3em;
+            color: #e6ba0c;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: none;
+            margin-bottom: 0%;
+            margin-top: 180px;
+
+        }
+        .mobile-menu-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            z-index: 9999;
+            font-weight: bolder;
+        }
+        .nav-container {
+            display: flex;
+            flex-direction: row; /* Updated to row for desktop view */
+            align-items: center;
+            margin-right: 150px;
+        }
+        .nav-container a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+            transition: color 0.3s ease;
+        }
+        .nav-container a:hover {
+            color: #e6ba0c;
+        }
+        
+
+        /* New container for mobile menu */
+        .mobile-nav-container {
+            height: 100%;
+            width: 0; /* Initially set to 0 */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0; /* Change from left to right */
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            /* Set width to 50% */
+            width: 50%;
+        }
+        .mobile-nav-container a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .mobile-nav-container a:hover, .mobile-nav-container a:focus {
+            color: #f1f1f1;
+        }
+        .mobile-nav-container .closebtn {
+            position: absolute;
+            top: 5px;
+            left: 0px; /* Change from right to left */
+            font-size: 50px;
+            color: white;
+        }
+        @media screen and (max-height: 450px) {
+            .mobile-nav-container a {
+                font-size: 20px;
+            }
+            .mobile-nav-container .closebtn {
+                font-size: 40px;
+                top: 15px;
+                left: 35px; /* Change from right to left */
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .nav-container {
+                display: none;
+            }
+            .mobile-menu-icon {
+                display: block;
+            }
+        }
+        @media only screen and (min-width: 769px) {
+            .mobile-menu-icon {
+                display: none;
+            }
+            .mobile-nav-container{
+                display: none;
+            }
+            .footer-container {
+                display: block;
+            }
+            .nav-container {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-header">
+    <div class="hero-overlay">
+        <span class="creative-text">Aryan Acharya</span>
+        <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-section">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-post" data-url="https://www.linkedin.com/feed/update/urn:li:activity:7166674641195941888">
+        <div class="click-view-text">Click to View</div>
+        <h3 class="blog-title">Exploring the World of Machine Learning</h3>
+        <p class="blog-meta">Published on March 1, 2024</p>
+        <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+</section>
+
+<footer class="footer-container">
+    &copy; 2024 Aryan Acharya | Portfolio Website
+</footer>
+
+<!-- Mobile menu -->
+<!-- Mobile menu -->
+<!-- Mobile menu -->
+<div id="myNav" class="mobile-nav-container" style="width: 0;"> <!-- Set initial width to 0 -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+
+            
+
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+</div>
+
+
+
+<script>
+    // Function to toggle the mobile menu
+    function toggleMobileNav() {
+        var nav = document.getElementById("myNav");
+        if (nav.style.width === "0px" || nav.style.width === "") {
+            nav.style.width = "50%";
+        } else {
+            nav.style.width = "0";
+        }
+    }
+
+    // Prevent default behavior of links inside mobile menu from refreshing the page
+    document.querySelectorAll('#myNav a').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            setTimeout(toggleMobileNav, 300); // Toggle the mobile menu after a short delay (300 milliseconds)
+            // Get the URL from the clicked link and navigate to it after the delay
+            setTimeout(() => {
+                window.location.href = event.target.href;
+            }, 300);
+        })
+    });
+</script>
+   
+
+</body>
+</html>
