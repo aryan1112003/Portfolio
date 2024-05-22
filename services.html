@@ -176,6 +176,12 @@
             .mobile-menu-icon {
                 display: block;
             }
+            .creative-text {
+
+        margin: 0; /* Reset margin for desktop view */
+        margin-top: 10px; /* Adjust margin-top for spacing in desktop view */
+    
+    }
         }
         @media only screen and (min-width: 769px) {
             .mobile-menu-icon {
@@ -189,7 +195,14 @@
             }
             .nav-container {
                 display: flex;
+                margin-top: -22px;
             }
+            .creative-text {
+
+margin: 0; /* Reset margin for desktop view */
+margin-top: 10px; /* Adjust margin-top for spacing in desktop view */
+            }
+            
         }
 
     </style>
@@ -198,10 +211,8 @@
 <body>
     <header class="hero-header">
         <div class="hero-overlay">
-            <!-- Mobile menu icon -->
-
-
             <span class="creative-text">Aryan Acharya</span>
+            <nav class="nav-container">
                 <a href="index.html">Home</a>
                 <a href="Resume.html">Resume</a>
                 <a href="services.html">Services</a>
@@ -212,8 +223,7 @@
             </div>
         </div>
     </header>
-
-    <!-- Mobile navigation menu -->
+    
     <div id="myNav" class="mobile-nav-container">
         <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
         <a href="index.html">Home</a>
