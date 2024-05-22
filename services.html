@@ -198,30 +198,25 @@
 <body>
     <header class="hero-header">
         <div class="hero-overlay">
-            <!-- Mobile menu icon -->
-            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
-                &#9776;
-            </div>
+            <span class="creative-text">Aryan Acharya</span>
             <nav class="nav-container">
-                <span class="creative-text">Aryan Acharya</span>                
                 <a href="index.html">Home</a>
                 <a href="Resume.html">Resume</a>
-                <a href="services.html">Services</a> <!-- Add the new page link -->
+                <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
-
             </nav>
+            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
     </header>
-
-    <!-- Mobile navigation menu -->
+    
     <div id="myNav" class="mobile-nav-container">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleMobileNav()">&times;</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Resume.html">Resume</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="Resume.html">Resume</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <div class="services-container">
