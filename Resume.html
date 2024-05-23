@@ -418,21 +418,29 @@ body {
         background-color: #ffffffc4; /* Change background color */
         position: fixed;
         top: 0;
-        left: 0;
+        right: -50%; /* Initially position off the right edge */
         height: 100%;
-        width: 100%;
+        width: 50%; /* Set width to 50% */
         z-index: 1000; /* Set higher z-index */
         overflow-y: auto; /* Enable vertical scrolling */
+        transition: right 0.3s ease-in-out; /* Add transition for smooth animation */
+    }
+
+    .mobile-nav-container.open {
+        right: 0; /* Slide in from the right */
     }
 
     .mobile-nav-container a {
         font-size: 20px;
         margin-right: auto;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
     }
 
     .mobile-nav-container a:hover,
     .mobile-nav-container a:focus {
-        background-color: #ffffffc4; /* Change background color on hover */
+        background-color: #ffffff; /* Change background color on hover */
     }
 
     .hero-section {
@@ -520,7 +528,6 @@ body {
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
     </div>
-    
 
 <div class="container">
                 <section class="hero-section">
@@ -782,17 +789,17 @@ function downloadFile() {
     }
 
     // Function to open the mobile menu
-    function openMobileNav() {
-        var nav = document.getElementById("myNav");
-        nav.style.width = "50%"; // Set width to 50% when opening
-    }
+    function toggleMobileNav() {
+            document.getElementById('myNav').classList.toggle('open');
+        }
 
-    // Function to close the mobile menu
-    function closeMobileNav() {
-        var nav = document.getElementById("myNav");
-        nav.style.width = "0"; // Set width to 0 when closing
-    }
+        function closeMobileNav() {
+            document.getElementById('myNav').classList.remove('open');
+        }
 
+
+       
+    
     // Close the mobile navigation container on page load or refresh
     document.addEventListener("DOMContentLoaded", function() {
         closeMobileNav();
