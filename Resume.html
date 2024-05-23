@@ -397,83 +397,102 @@ body {
 }
 
 
-        /* Media query for smaller screens */
-        @media only screen and (max-width: 768px) {
-            .mobile-menu-icon {
-                display: block; /* Show the mobile menu icon on smaller screens */
-                font-size: 1.5em;
-                cursor: pointer;
-                color: #fff; /* Change icon color */
-                padding-top: 5px;
-            }
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block; /* Show the mobile menu icon on smaller screens */
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #fff; /* Change icon color */
+        padding-top: 5px;
+    }
 
-            .nav-container {
-                display: none; /* Hide the normal navigation bar on smaller screens */
-            }
+    .nav-container {
+        display: none; /* Hide the normal navigation bar on smaller screens */
+    }
 
-            .mobile-nav-container {
-                display: flex; /* Change display to flex */
-                flex-direction: column; /* Set flex direction to column */
-                align-items: center; /* Center items horizontally */
-                background-color: #ffffffc4; /* Change background color */
-                position: fixed;
-                top: 0;
-                left: 1;
-                height: 100%;
-                width: 100%;
-                z-index: 1000; /* Set higher z-index */
-                overflow-y: auto; /* Enable vertical scrolling */
-            }
+    .mobile-nav-container {
+        display: flex; /* Change display to flex */
+        flex-direction: column; /* Set flex direction to column */
+        align-items: center; /* Center items horizontally */
+        background-color: #ffffffc4; /* Change background color */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000; /* Set higher z-index */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
 
-            .mobile-nav-container a {
-                font-size: 20px;
-                margin-right: auto;
-            }
-            
+    .mobile-nav-container a {
+        font-size: 20px;
+        margin-right: auto;
+    }
 
-            .mobile-nav-container a:hover,
-            .mobile-nav-container a:focus {
-                background-color: #ffffffc4; /* Change background color on hover */
-            }
-            .hero-section {
-                    padding: 20px 0; /* Adjust padding for smaller screens */
-                }
+    .mobile-nav-container a:hover,
+    .mobile-nav-container a:focus {
+        background-color: #ffffffc4; /* Change background color on hover */
+    }
 
-                .hero-section h2 {
-                    font-size: 1.5em; /* Decrease font size for smaller screens */
-                    margin-bottom: 20px; /* Adjust margin for smaller screens */
-                }
+    .hero-section {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        text-align: center; /* Center text */
+        margin: 0 auto; /* Center section itself */
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
-                .skills-container {
-                    flex-direction: column; /* Stack skills cards vertically on smaller screens */
-                    align-items: center; /* Center skills cards horizontally on smaller screens */
-                }
+    .hero-section h2 {
+        font-size: 1.5em; /* Decrease font size for smaller screens */
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
 
-                .skills-card {
-                    margin: 10px 0; /* Adjust margin between skills cards for smaller screens */
-                }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of flex items */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        gap: 10px; /* Add space between items */
+    }
 
+    .skills-card {
+        width: calc(50% - 10px); /* Make each card take half of the container width, minus the gap */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the contents of each skills card */
+        text-align: center;
+        margin: 10px 0; /* Adjust margin between skills cards for smaller screens */
+    }
 
+    .skills-card img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto;
+    }
 
-                .creative-text2 {
-                font-family: cursive;
-                font-size: 1.3em;
-                color: #e6ba0c;
-                text-decoration: none;
-                margin-right: 20px;
-                padding: 5px 10px;
-                border-radius: 5px;
-                background-color: #33333300;
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                z-index: 1000;
-                font-weight: bold;
-                margin-top: 40px;
-            }
+    .creative-text2 {
+        font-family: cursive;
+        font-size: 1.3em;
+        color: #e6ba0c;
+        text-decoration: none;
+        margin-right: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #33333300;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+}
 
-
-            }
         
     </style>
 </head>
